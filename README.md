@@ -1,6 +1,6 @@
 # README
 
-## menbersテーブル
+## membersテーブル
 
 |column|type|options|
 |------|----|-------|
@@ -24,7 +24,7 @@
 - has_many :users, through: :menbers
 
 
-## user テーブル
+## usersテーブル
 |column|type|options|
 |------|----|-------|
 |name|string|null: false|
@@ -36,7 +36,7 @@
 - has_many :groups, through: :menbers
 
 
-## messageテーブル
+## messagesテーブル
 |column|type|options|
 |------|----|-------|
 |body|text||
