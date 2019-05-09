@@ -17,11 +17,11 @@
 |column|type|options|
 |------|----|-------|
 |title|string|null: false|
-|menber_id|integer||
+|member_id|integer||
 
 ### Association
 - has_many :messages
-- has_many :users, through: :menbers
+- has_many :users, through: :members
 
 
 ## usersテーブル
@@ -33,7 +33,7 @@
 
 ### Association
 - has_many :messages
-- has_many :groups, through: :menbers
+- has_many :groups, through: :members
 
 
 ## messagesテーブル
