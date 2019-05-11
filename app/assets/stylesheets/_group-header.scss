@@ -1,7 +1,7 @@
 .group-header{
     height: 100px;
     border-bottom: $border solid 1px;
-    .group-header__right{
+    &__right{
       float: right;
       a{
       text-decoration: none;
@@ -16,7 +16,7 @@
       display: block;
       }
     }
-    .group-header__left{
+    &__left{
       float: left;
       &__members{
         color: $gray;
