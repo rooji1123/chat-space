@@ -1,7 +1,6 @@
 # README
 
 ## membersテーブル
-
 |column|type|options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
@@ -13,7 +12,6 @@
 
 
 ## groupsテーブル
-
 |column|type|options|
 |------|----|-------|
 |title|string|null: false|
