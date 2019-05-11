@@ -1,0 +1,47 @@
+.group-footer{
+    height: 90px;
+    width: calc( 100vw - 300px );
+    background-color: #dddddd;
+    position: absolute;
+    bottom: 0px;
+    .footer-form{
+      padding: 20px 40px;
+      display: flex;
+      &__message{
+        height: 50px;
+        width: 80%;
+        padding: 0 10px;
+        background-color: $white;
+        position: relative;
+        &__input{
+          border:solid 0px;
+          height: 50px;
+          width: 100%;
+          background-color: $white;
+        }
+          i{
+            font-size: 1.3em;
+            position: absolute;
+            top: 28%;
+            left: 95%;
+            cursor: pointer;
+            #upload-icon{
+              display: none;
+            }
+          }
+      }
+      &__send{
+        padding-left: 15px;
+        input{
+          height: 50px;
+          width: 100px;
+          background-color: $blue;
+          text-decoration: none;
+          border: none;
+          color: $white;
+          text-align: center;
+          line-height: 50px;
+        }
+      }
+    }
+  }
