@@ -9,10 +9,6 @@ $blue: #38aef0;
 $border: #eeeeee;
 $dark-gray:#434A54;
 
-body{
-  min-height: 100%;
-  width: 100%;
-}
 
 .header-top{
   height: 40px;
@@ -28,6 +24,7 @@ body{
   }
 }
 
+
 #contents-left{
   height: 100vh;
   width: 300px;
@@ -37,7 +34,7 @@ body{
   .header-user{
     background-color:#253241;
     height: 100px;
-    .user_name{
+    &__name{
       color: $white;
       font-size: 16px;
       line-height: 100px;
@@ -45,19 +42,21 @@ body{
       font-weight: bold;
       padding-left: 20px;
     }
-    .icon-user{
+
+    &__icon{
       float: right;
       padding-right: 20px;
-    }
-    a{
-      text-decoration: none;
-      color: $white;
-      i{
-        font-size: 1.3em;
-        line-height: 100px;
+      a{
+        text-decoration: none;
+        color: $white;
+        i{
+          font-size: 1.3em;
+          line-height: 100px;
+        }
       }
     }
   }
+
   .groups{
     height: calc( 100vh - 140px);
     overflow: scroll;
@@ -67,12 +66,12 @@ body{
       text-decoration: none;
       .group{
         padding-bottom: 40px;
-        .group__name{
+        &__name{
           font-size: 15px;
           padding-bottom: 5px;
           font-weight: bold;
         }
-        .group__message{
+        &__message{
           font-size: 11px;
           font-weight: bold;
         }
@@ -80,6 +79,7 @@ body{
     }
   }
 }
+
 
 #contents-right{
   height: 100vh;
@@ -90,7 +90,7 @@ body{
   .group-header{
     height: 100px;
     border-bottom: $border solid 1px;
-    .right-group{
+    .group-header__right{
       float: right;
       a{
       text-decoration: none;
@@ -105,15 +105,15 @@ body{
       display: block;
       }
     }
-    .left-group{
+    .group-header__left{
       float: left;
-      .group__members{
+      &__members{
         color: $gray;
         font-size: 12px;
         padding-top: 15px;
         padding-left: 40px;
       }
-      .group-name{
+      &__name{
         color: $black;
         font-size: 20px;
         padding-top: 35px;
@@ -130,24 +130,24 @@ body{
     padding-top: 46px;
     padding-bottom: 90px;
     box-sizing: border-box;
-    .messages{
+    &__messages{
       height: 40px;
       padding-left: 40px;
       padding-bottom: 40px;
-      .user-name{
+      &__user-name{
         color: $dark-gray;
         font-weight: bold;
         font-size: 16px;
         float: left;
       }
-      .date{
+      &__date{
         font-size: 12px;
         color: $gray;
         line-height: 24px;
         float: left;
         padding-left: 10px;
       }
-      .message{
+      &__message{
         font-size: 14px;
         color: $dark-gray;
         clear: both;
@@ -161,16 +161,16 @@ body{
     background-color: #dddddd;
     position: absolute;
     bottom: 0px;
-    .message-form{
+    .footer-form{
       padding: 20px 40px;
       display: flex;
-      .message__form{
+      &__message{
         height: 50px;
         width: 80%;
         padding: 0 10px;
         background-color: $white;
         position: relative;
-        .message__input{
+        &__input{
           border:solid 0px;
           height: 50px;
           width: 100%;
@@ -187,7 +187,7 @@ body{
             }
           }
       }
-      .send__button{
+      &__send{
         padding-left: 15px;
         input{
           height: 50px;
