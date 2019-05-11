@@ -1,0 +1,41 @@
+.header-top
+  %p グループを作成しました
+
+#contents-left
+  .header-user
+    %p
+      %nobr
+        .user_name Thomas Cruise
+    .icon-user
+      = link_to do
+        %i.fa.fa-edit
+      = link_to do
+        %i.fa.fa-cog
+  .groups
+    - for i in 1..10
+      = link_to do
+        .group
+          %p.group__name グループ名
+          %p.group__message メッセージ
+#contents-right
+  .group-header
+    .left-group
+      .group-name egg-expert 52_短期
+      %p.group__members Member : わたし,たわし
+    .right-group
+      = link_to 'Edit',  ''
+  .group-main
+    - for i in 1..10
+      .messages
+        .user-name 加藤蒔朗
+        .date 2340/03/43/07:24:22
+        .message こんにちは
+  .group-footer
+    .message-form
+      %form.message__form
+        %input.message__input{ type: "text", name: "message", placeholder: "メッセージ"}
+        %label.upload-label{for: "upload-icon"}
+          %i.fa.fa-picture-o
+            %input{ type:"file", id:"upload-icon"}
+      .send__button
+        %input{ type: "submit", value: "Send", name: "message-send"}
