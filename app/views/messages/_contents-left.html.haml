@@ -1,0 +1,14 @@
+#contents-left
+  .header-user
+    .header-user__name Thomas Cruise
+    .header-user__icon
+      = link_to '#' do
+        %i.fa.fa-edit
+      = link_to '#' do
+        %i.fa.fa-cog
+  .groups
+    - for i in 1..10
+      = link_to '#' do
+        .group
+          %p.group__name グループ名
+          %p.group__message メッセージ
