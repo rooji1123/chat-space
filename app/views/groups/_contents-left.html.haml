@@ -3,13 +3,15 @@
     .header-user__name
       = current_user.name
     .header-user__icon
-      = link_to '#' do
+      = link_to new_group_path do
         %i.fa.fa-edit
       = link_to edit_user_path(current_user) do
         %i.fa.fa-cog
   .groups
-    - for i in 1..10
+    - current_user.groups.each do |group|
       = link_to '#' do
         .group
-          %p.group__name グループ名
-          %p.group__message メッセージ
+          %p.group__name
+            = group.title
+          %p.group__message
+            メッセージはまだありません。

@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190513033937) do
+ActiveRecord::Schema.define(version: 20190513072927) do
 
   create_table "groups", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "title"
     t.string   "member_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "title",      null: false
   end
 
   create_table "groups_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
