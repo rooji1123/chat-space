@@ -1,0 +1,26 @@
+
+.flash {
+  .notice {
+    color: $white;
+    font-size: 15px;
+    letter-spacing: 3px;
+    line-height: 30px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 30px;
+    width: 100%;
+    background-color: $blue;
+  }
+
+  .alert {
+    background-color: $alert_orange;
+    color: $white;
+    font-size: 15px;
+    letter-spacing: 3px;
+    line-height: 30px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 30px;
+    width: 100%;
+  }
+}

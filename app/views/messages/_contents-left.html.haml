@@ -1,10 +1,11 @@
 #contents-left
   .header-user
-    .header-user__name Thomas Cruise
+    .header-user__name
+      = current_user.name
     .header-user__icon
       = link_to '#' do
         %i.fa.fa-edit
-      = link_to '#' do
+      = link_to edit_user_path(current_user) do
         %i.fa.fa-cog
   .groups
     - for i in 1..10
