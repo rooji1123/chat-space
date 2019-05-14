@@ -1,0 +1,22 @@
+= render partial: "contents-left"
+
+#contents-right
+  .group-header
+    .group-header__left
+      .group-header__left__name
+        = @group.title
+      %p.group-header__left__members
+        - @group.users.each do |user|
+          = "    " + user.name
+    .group-header__right
+      = link_to 'Edit',  edit_group_path(@group.id)
+  = render partial: 'messages', collection: @messages
+  = form_for [@group, @message] do |f|
+    .group-footer
+      .footer-form
+        .footer-form__message
+          = f.text_field :body, {placeholder: "メッセージ", class: "footer-form__message__input" }
+          %label.upload-label{ for: "upload-icon" }
+            %i.fa.fa-picture-o
+              = f.file_field :image, {id: "upload-icon"}
+        = f.submit "Send", class: "footer-form__send"

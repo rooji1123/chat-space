@@ -31,17 +31,15 @@
           }
       }
       &__send{
-        padding-left: 15px;
-        input{
-          height: 50px;
-          width: 100px;
-          background-color: $blue;
-          text-decoration: none;
-          border: none;
-          color: $white;
-          text-align: center;
-          line-height: 50px;
-        }
+        margin-left: 15px;
+        height: 50px;
+        width: 100px;
+        background-color: $blue;
+        text-decoration: none;
+        border: none;
+        color: $white;
+        text-align: center;
+        line-height: 50px;
       }
     }
   }

@@ -1,0 +1,10 @@
+
+.group-main
+  - @messages.each do |message|
+    .group-main__messages
+      .group-main__messages__user-name
+        = message.user.name
+      .group-main__messages__date
+        = message.created_at
+      .group-main__messages__message
+        = message.body
