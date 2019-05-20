@@ -3,22 +3,20 @@
 #contents-right
   .group-header
     .group-header__left
-      .group-header__left__name egg-expert 52_短期
-      %p.group-header__left__members Member : わたし,たわし
+      .group-header__left__name
+        = @group.title
+      %p.group-header__left__members
+        - @group.users.each do |user|
+          = "    " + user.name
     .group-header__right
-      = link_to 'Edit',  '#'
-  .group-main
-    - for i in 1..10
-      .group-main__messages
-        .group-main__messages__user-name 加藤蒔朗
-        .group-main__messages__date 2340/03/43/07:24:22
-        .group-main__messages__message こんにちは
-  .group-footer
-    .footer-form
-      %form.footer-form__message
-        %input.footer-form__message__input{ type: "text", name: "message", placeholder: "メッセージ" }
-        %label.upload-label{ for: "upload-icon" }
-          %i.fa.fa-picture-o
-            %input{ type:"file", id:"upload-icon" }
-      .footer-form__send
-        %input{ type: "submit", value: "Send", name: "message-send" }
+      = link_to 'Edit',  edit_group_path(@group.id)
+  = render partial: 'messages', collection: @messages
+  = form_for [@group, @message] do |f|
+    .group-footer
+      .footer-form
+        .footer-form__message
+          = f.text_field :body, {placeholder: "メッセージ", class: "footer-form__message__input" }
+          %label.upload-label{ for: "upload-icon" }
+            %i.fa.fa-picture-o
+              = f.file_field :image, {id: "upload-icon"}
+        = f.submit "Send", class: "footer-form__send"
