@@ -22,15 +22,10 @@
         float: left;
         padding-left: 10px;
       }
-      &__bottom{
-        &__message{
-          font-size: 14px;
-          color: $dark-gray;
-          clear: both;
-        }
-        &__message{
-          
-        }
+      &__message{
+        font-size: 14px;
+        color: $dark-gray;
+        clear: both;
       }
     }
   }
