@@ -1,4 +1,4 @@
-= render partial: "contents-left"
+= render partial: "layouts/contents-left"
 
 #contents-right
   .group-header
@@ -10,13 +10,24 @@
           = "    " + user.name
     .group-header__right
       = link_to 'Edit',  edit_group_path(@group.id)
-  = render partial: 'messages', collection: @messages
-  = form_for [@group, @message] do |f|
+  .group-main
+    - @messages.each do |message|
+      .group-main__messages
+        %p.group-main__messages__user-name
+          = message.user.name
+        %p.group-main__messages__date
+          = message.created_at.in_time_zone('Tokyo').strftime('%Y/%m/%d %H:%M')
+        .group-main__messages__bottom
+          %p.group-main__messages__bottom__message
+            = message.body
+          %p.group-main__message__bottom__image
+            = image_tag(message.image)
+  = form_for [@group, @message], html: {class: 'message_send'} do |f|
     .group-footer
       .footer-form
         .footer-form__message
           = f.text_field :body, {placeholder: "メッセージ", class: "footer-form__message__input" }
           %label.upload-label{ for: "upload-icon" }
             %i.fa.fa-picture-o
-              = f.file_field :image, {id: "upload-icon"}
+              = f.file_field :image, {class: "image__form", id: "upload-icon"}
         = f.submit "Send", class: "footer-form__send"
