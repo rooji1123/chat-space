@@ -24,6 +24,7 @@ $(function() {
       var html = buildHTML(data);
       $('.group-main').append(html)
       $('.footer-form__message__input').val('')
+      $('.group-main').animate({scrollTop: $('.group-main')[0].scrollHeight}, '500')
     })
 
     .always(() => {
