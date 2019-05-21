@@ -1,11 +1,7 @@
 $(function() {
   function buildHTML(message){
     var image =$('.image__form').val();
-    if (image == "") {
-      var image = ""
-    } else {
-      var image = `<image src='${message.image.url}'></image>`
-    }
+    image == "" ?  image = "" : image =`<image src='${message.image.url}'></image>`;
     var html = 
     `<div class="group-main__messages">
         <p class="group-main__messages__user-name">${message.name}</p>
