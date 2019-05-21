@@ -10,8 +10,16 @@
           = "    " + user.name
     .group-header__right
       = link_to 'Edit',  edit_group_path(@group.id)
-  = render partial: 'messages', collection: @messages
-  = form_for [@group, @message] do |f|
+  .group-main
+    - @messages.each do |message|
+      .group-main__messages
+        %p.group-main__messages__user-name
+          = message.user.name
+        %p.group-main__messages__date
+          = message.created_at.in_time_zone('Tokyo')
+        %p.group-main__messages__message
+          = message.body
+  = form_for [@group, @message], html: {class: 'message_send'} do |f|
     .group-footer
       .footer-form
         .footer-form__message

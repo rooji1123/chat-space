@@ -6,7 +6,7 @@
     padding-bottom: 90px;
     box-sizing: border-box;
     &__messages{
-      height: 40px;
+      min-height: 40px;
       padding-left: 40px;
       padding-bottom: 40px;
       &__user-name{
