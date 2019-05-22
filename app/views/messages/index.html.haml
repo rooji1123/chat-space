@@ -9,7 +9,7 @@
         - @group.users.each do |user|
           = "    " + user.name
     .group-header__right
-      = link_to 'Edit',  edit_group_path(@group.id)
+      = link_to 'Edit',  edit_group_path(@group.id), data: {"turbolinks": false}
   .group-main
     - @messages.each do |message|
       .group-main__messages

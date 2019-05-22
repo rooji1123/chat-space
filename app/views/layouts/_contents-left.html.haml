@@ -3,7 +3,7 @@
     .header-user__name
       = current_user.name
     .header-user__icon
-      = link_to new_group_path do
+      = link_to new_group_path, data: {"turbolinks": false} do
         %i.fa.fa-edit
       = link_to edit_user_path(current_user) do
         %i.fa.fa-cog
