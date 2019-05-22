@@ -3,7 +3,7 @@ $(function() {
     users.forEach(function(user) {
       if (user == undefined) {
         $("#user-search-result").append(`<p>ユーザーが見つかりません</p>`)
-      } else if (user.name == current_user_name) {
+      } else if (user.name == current_user_name ) {
         ""
       } else {
         var user_name = user.name;
