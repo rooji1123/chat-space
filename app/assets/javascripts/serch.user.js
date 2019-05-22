@@ -1,10 +1,8 @@
 $(function() {
   function buildHTML(users, current_user_name){
     users.forEach(function(user) {
-      if (user == undefined) {
+      if (user == undefined ) {
         $("#user-search-result").append(`<p>ユーザーが見つかりません</p>`)
-      } else if (user.name == current_user_name ) {
-        ""
       } else {
         var user_name = user.name;
         var user_id = user.user_id;
@@ -30,9 +28,8 @@ $(function() {
 
     .done(function(users) {
       $("#user-search-result").empty();
-      var current_user_name = $(".current_user_name").val();
-      if (users !== 0) {
-        buildHTML(users, current_user_name);
+      if (users !== 0 ) {
+        buildHTML(users);
       } else {
         $("#user-search-result").append(`<p>ユーザーが見つかりません</p>`);
       }

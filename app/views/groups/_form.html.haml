@@ -1,6 +1,4 @@
 = form_for group do |f|
-  %input{name: "group[user_ids][]", type: "hidden", value: "#{current_user.id}", class:  "current_user_id" }
-  %input{name: "user_name", type: "hidden", value: "#{current_user.name}", class:  "current_user_name" }
   - if group.errors.any?
     .chat-group-form__errors
       %h2= "#{group.errors.full_messages.count}件のエラーが発生しました。"
