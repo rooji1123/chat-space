@@ -4,6 +4,7 @@ class UsersController < ApplicationController
     @users = User.where('name LIKE(?)', "%#{params[:keyword]}%")
     respond_to do |format|
       format.json
+    @current_user = current_user.id
     end
   end
 
