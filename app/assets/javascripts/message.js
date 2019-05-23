@@ -1,7 +1,7 @@
 $(function() {
   function buildHTML(message){
     var image =$('.image__form').val();
-    image = image=="" ? "" :  `<image src='${message.image.url}'></image>`;
+    image = message.image.url==null ? "" :  `<image src='${message.image.url}'></image>`;
     var html = 
     `<div class="group-main__messages">
         <p class="group-main__messages__user-name">${message.name}</p>
@@ -12,6 +12,7 @@ $(function() {
             ${image}
           </p>
         </div>
+        <div class="message_id" data-id="${message.id}"></div>
     </div>`
     return html;
   }
