@@ -18,12 +18,12 @@ $(function(){
     })
   }
 
-  $(function() {
-    var url = location.href;
-    if(url.match(/messages/) && $('.group-main__messages').length) {
-      setInterval(update, 1000);
-    }
-  });
+  // $(function() {
+  //   var url = location.href;
+  //   if(url.match(/messages/) && $('.group-main__messages').length) {
+  //     setInterval(update, 1000);
+  //   }
+  // });
 
   function update() {
     var message_id = $('.message_id:last').data('id');
