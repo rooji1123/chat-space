@@ -1,5 +1,5 @@
 $(function() {
-  function buildHTML(users, current_user_name){
+  function buildHTML(users){
     users.forEach(function(user) {
       if (user == undefined ) {
         $("#user-search-result").append(`<p>ユーザーが見つかりません</p>`)
@@ -28,10 +28,10 @@ $(function() {
 
     .done(function(users) {
       $("#user-search-result").empty();
-      if (users !== 0 ) {
+      if (users !== 0 && input.length > 0) {
         buildHTML(users);
       } else {
-        $("#user-search-result").append(`<p>ユーザーが見つかりません</p>`);
+        $("#user-search-result").append(``);
       }
     })
     .fail(function() {
