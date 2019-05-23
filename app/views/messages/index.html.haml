@@ -12,6 +12,7 @@
       = link_to 'Edit',  edit_group_path(@group.id), data: {"turbolinks": false}
   .group-main
     - @messages.each do |message|
+      %div.message_id{data: {id: message.id}}
       .group-main__messages
         %p.group-main__messages__user-name
           = message.user.name
