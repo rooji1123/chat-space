@@ -54,12 +54,12 @@ $(function() {
     $(".add-user-group").append(html)
   }
 
-$(document).on("click",".chat-group-user__btn--add", function() {
-  var user = $(this).data();
-  $(this).parent().remove();
+  $(document).on("click",".chat-group-user__btn--add", function() {
+    var user = $(this).data();
+    $(this).parent().remove();
 
-  buildHTML(user)
-})
+    buildHTML(user)
+  })
 });
 
 $(function() {
